@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
 
 	// Your password
 	password: "",
-	database: "BamazonDB"
+	database: "Bamazon"
 });
 
 connection.connect(function(err) {
@@ -37,7 +37,6 @@ function fListItems() {
 };
 
 function fSell() {
-  // prompt for info about the item being put up for auction
   inquirer
     .prompt([
       {
@@ -80,12 +79,8 @@ function fSell() {
 					connection.query(
 						"UPDATE Products SET ? WHERE ?",
 						[
-							{
-								stock_quantity: (vstock - vbuy)
-							},
-							{
-								item_id: answer.productID
-							}
+							{ stock_quantity: (vstock - vbuy) },
+							{ item_id: answer.productID }
 						],
 						function(error) {
 							if (error) throw err;

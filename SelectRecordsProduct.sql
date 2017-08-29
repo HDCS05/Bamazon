@@ -1,2 +1,2 @@
-Use BamazonDB;
+Use Bamazon;
 Select * from Products;

@@ -1,6 +1,6 @@
-Create Database BamazonDB;
+Create Database Bamazon;
 
-USE BamazonDB;
+USE Bamazon;
 
 CREATE TABLE products(
   item_id INT NOT NULL UNIQUE AUTO_INCREMENT,
